@@ -1,2 +1,2 @@
-# szko-a
+# szkola
 Przykładowa baza danych dla szkoły
