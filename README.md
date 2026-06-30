@@ -97,6 +97,72 @@ Projekt wykorzystuje:
 * Microsoft SQL Server
 * Transact-SQL (T-SQL)
 
-## Autor
 
-Projekt wykonany w ramach zajęć z baz danych.
+
+
+## Instalacja i uruchomienie
+
+### Wymagania
+
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
+
+### Kolejność uruchamiania skryptów
+
+Po utworzeniu nowej bazy danych należy wykonać skrypty w następującej kolejności:
+
+1. **Utworzenie bazy danych i tabel**
+
+   * Skopiuj i wykonaj skrypt z pliki **TworzenieTabel.sql**, który tworzy wszystkie tabele, klucze główne oraz klucze obce.
+
+2. **Wypełnienie bazy przykładowymi danymi**
+
+   ```text
+   Uzupelnianie calej bazy.sql
+   ```
+
+3. **Dodanie procedur składowanych**
+
+   ```text
+   procedury.sql
+   ```
+
+4. **Dodanie funkcji**
+
+   ```text
+   scalar function.sql
+   inline valued functions.sql
+   multi-statement valued function.sql
+   ```
+
+5. **Utworzenie widoków**
+
+   ```text
+   Widoki.sql
+   widok indeksowany.sql
+   ```
+
+6. **Utworzenie indeksów**
+
+   ```text
+   indeksy.sql
+   ```
+
+7. **Dodanie wyzwalaczy**
+
+   ```text
+   trigger dml.sql
+   trigger ddl.sql
+   trigger instead.sql
+   ```
+
+8. **Uruchomienie przykładowych zapytań**
+
+   ```text
+   selecty.sql
+   ranking.sql
+   funkcje rankingowe lag, lead.sql
+   ```
+
+Po wykonaniu wszystkich skryptów baza danych będzie zawierała kompletną strukturę, przykładowe dane oraz wszystkie elementy projektu (procedury, funkcje, widoki, indeksy i wyzwalacze).
+
