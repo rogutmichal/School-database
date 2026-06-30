@@ -25,6 +25,7 @@ Projekt zawiera:
 | Plik                                  | Opis                                           |
 | ------------------------------------- | ---------------------------------------------- |
 | `Szkoła.docx`                         | Dokumentacja projektu oraz wszystkie polecenia |
+| `TworzenieTabel.docx`                 | Tworzenie tabel i kluczy                       |
 | `Uzupelnianie calej bazy.sql`         | Wypełnienie bazy przykładowymi danymi          |
 | `procedury.sql`                       | Procedury składowane                           |
 | `scalar function.sql`                 | Funkcje skalarne                               |
