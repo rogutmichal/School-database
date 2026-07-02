@@ -1,134 +1,131 @@
 # School Database (SQL Server)
 
-Projekt przedstawia kompletną bazę danych szkoły stworzoną w Microsoft SQL Server. Celem projektu było zaprojektowanie relacyjnej bazy danych oraz implementacja najważniejszych elementów programowania w T-SQL, takich jak procedury składowane, funkcje, widoki, indeksy oraz wyzwalacze.
+This project presents a complete school database created in Microsoft SQL Server. The goal of the project was to design a relational database and implement key T-SQL programming features such as stored procedures, functions, views, indexes, and triggers.
 
-## Funkcjonalności
+## Features
 
-Projekt zawiera:
+The project includes:
 
-* projekt relacyjnej bazy danych szkoły,
-* skrypt tworzący wszystkie tabele i relacje,
-* skrypt uzupełniający bazę przykładowymi danymi,
-* procedury składowane,
-* funkcje skalarne,
-* funkcje tabelaryczne (Inline Table-Valued Functions),
-* funkcje wieloinstrukcyjne (Multi-Statement Table-Valued Functions),
-* widoki,
-* widok indeksowany,
-* indeksy,
-* funkcje rankingowe (`DENSE_RANK`, `LAG`, `LEAD`),
-* wyzwalacze DML, DDL oraz INSTEAD OF,
-* przykładowe zapytania SQL.
+* a relational school database design,
+* a script for creating all tables and relationships,
+* a script for populating the database with sample data,
+* stored procedures,
+* scalar functions,
+* Inline Table-Valued Functions,
+* Multi-Statement Table-Valued Functions,
+* views,
+* an indexed view,
+* indexes,
+* ranking functions (`DENSE_RANK`, `LAG`, `LEAD`),
+* DML, DDL, and INSTEAD OF triggers,
+* sample SQL queries.
 
-## Struktura projektu
+## Project Structure
 
-| Plik                                  | Opis                                           |
-| ------------------------------------- | ---------------------------------------------- |
-| `Szkoła.docx`                         | Dokumentacja projektu oraz wszystkie polecenia |
-| `TworzenieTabel.docx`                 | Tworzenie tabel i kluczy                       |
-| `Uzupelnianie calej bazy.sql`         | Wypełnienie bazy przykładowymi danymi          |
-| `procedury.sql`                       | Procedury składowane                           |
-| `scalar function.sql`                 | Funkcje skalarne                               |
-| `inline valued functions.sql`         | Funkcje tabelaryczne inline                    |
-| `multi-statement valued function.sql` | Funkcje tabelaryczne wieloinstrukcyjne         |
-| `Widoki.sql`                          | Definicje widoków                              |
-| `widok indeksowany.sql`               | Widok indeksowany                              |
-| `indeksy.sql`                         | Tworzenie indeksów                             |
-| `ranking.sql`                         | Zapytania wykorzystujące funkcje rankingowe    |
-| `funkcje rankingowe lag, lead.sql`    | Przykłady funkcji LAG i LEAD                   |
-| `trigger dml.sql`                     | Wyzwalacz DML                                  |
-| `trigger ddl.sql`                     | Wyzwalacz DDL                                  |
-| `trigger instead.sql`                 | Wyzwalacz INSTEAD OF                           |
-| `selecty.sql`                         | Przykładowe zapytania SQL                      |
-| `szkola.dmd`                          | Diagram bazy danych                            |
+| File | Description |
+|------|-------------|
+| `Szkoła.docx` | Project documentation and all assignment requirements |
+| `TworzenieTabel.docx` | Creating tables and keys |
+| `Uzupelnianie calej bazy.sql` | Populating the database with sample data |
+| `procedury.sql` | Stored procedures |
+| `scalar function.sql` | Scalar functions |
+| `inline valued functions.sql` | Inline table-valued functions |
+| `multi-statement valued function.sql` | Multi-statement table-valued functions |
+| `Widoki.sql` | View definitions |
+| `widok indeksowany.sql` | Indexed view |
+| `indeksy.sql` | Creating indexes |
+| `ranking.sql` | Queries using ranking functions |
+| `funkcje rankingowe lag, lead.sql` | Examples of LAG and LEAD functions |
+| `trigger dml.sql` | DML trigger |
+| `trigger ddl.sql` | DDL trigger |
+| `trigger instead.sql` | INSTEAD OF trigger |
+| `selecty.sql` | Sample SQL queries |
+| `szkola.dmd` | Database diagram |
 
-## Model bazy danych
+## Database Model
 
-Baza danych opisuje działanie szkoły i zawiera między innymi następujące encje:
+The database represents the operation of a school and includes, among others, the following entities:
 
-* Osoby
-* Uczniowie
-* Pracownicy
-* Klasy
-* Zajęcia
-* Uczestnictwo
-* Oceny
-* Konkursy
-* Przedmioty
-* Stanowiska
+* People
+* Students
+* Employees
+* Classes
+* Lessons
+* Participation
+* Grades
+* Competitions
+* Subjects
+* Positions
 
-Relacje pomiędzy tabelami zostały zrealizowane przy użyciu kluczy głównych i obcych.
+Relationships between the tables are implemented using primary and foreign keys.
 
-## Zastosowane elementy SQL
+## SQL Features Used
 
-Projekt wykorzystuje:
+The project makes use of:
 
 * PRIMARY KEY
 * FOREIGN KEY
 * UNIQUE
 * IDENTITY
 * SEQUENCE
-* Procedury składowane
-* Funkcje skalarne
-* Funkcje tabelaryczne
-* Widoki
-* Widoki indeksowane
-* Indeksy klastrowane i nieklastrowane
-* Funkcje okna (`DENSE_RANK`, `LAG`, `LEAD`)
-* Transakcje
-* Obsługę wyjątków (`TRY...CATCH`)
-* Wyzwalacze DML
-* Wyzwalacze DDL
-* Wyzwalacze INSTEAD OF
+* Stored Procedures
+* Scalar Functions
+* Table-Valued Functions
+* Views
+* Indexed Views
+* Clustered and Nonclustered Indexes
+* Window Functions (`DENSE_RANK`, `LAG`, `LEAD`)
+* Transactions
+* Exception Handling (`TRY...CATCH`)
+* DML Triggers
+* DDL Triggers
+* INSTEAD OF Triggers
 
-## Przykładowe funkcjonalności
+## Example Functionality
 
-* dodawanie uczniów i pracowników,
-* usuwanie zajęć wraz z powiązanymi rekordami,
-* obliczanie średniej ocen ucznia,
-* obliczanie frekwencji ucznia,
-* wyszukiwanie uczniów zagrożonych,
-* wyświetlanie średnich klas,
-* ranking uczniów według średniej ocen,
-* zabezpieczenie przed usunięciem tabel,
-* walidacja poprawności ocen za pomocą wyzwalacza.
+* adding students and employees,
+* deleting lessons together with related records,
+* calculating a student's average grade,
+* calculating student attendance,
+* identifying at-risk students,
+* displaying class averages,
+* ranking students by average grade,
+* preventing accidental table deletion,
+* validating grades using triggers.
 
-## Technologie
+## Technologies
 
 * Microsoft SQL Server
 * Transact-SQL (T-SQL)
 
+## Installation and Setup
 
-
-
-## Instalacja i uruchomienie
-
-### Wymagania
+### Requirements
 
 * Microsoft SQL Server
 * SQL Server Management Studio (SSMS)
 
-### Kolejność uruchamiania skryptów
+### Script Execution Order
 
-Po utworzeniu nowej bazy danych należy wykonać skrypty w następującej kolejności:
+After creating a new database, execute the scripts in the following order:
 
-1. **Utworzenie bazy danych i tabel**
+1. **Create the database tables**
 
-   * Skopiuj i wykonaj skrypt z pliki **TworzenieTabel.sql**, który tworzy wszystkie tabele, klucze główne oraz klucze obce.
+   * Copy and execute the script from **TworzenieTabel.sql**, which creates all tables, primary keys, and foreign keys.
 
-2. **Wypełnienie bazy przykładowymi danymi**
+2. **Populate the database with sample data**
 
    ```text
    Uzupelnianie calej bazy.sql
    ```
 
-3. **Dodanie procedur składowanych**
+3. **Add stored procedures**
 
    ```text
    procedury.sql
    ```
 
-4. **Dodanie funkcji**
+4. **Add functions**
 
    ```text
    scalar function.sql
@@ -136,20 +133,20 @@ Po utworzeniu nowej bazy danych należy wykonać skrypty w następującej kolejn
    multi-statement valued function.sql
    ```
 
-5. **Utworzenie widoków**
+5. **Create views**
 
    ```text
    Widoki.sql
    widok indeksowany.sql
    ```
 
-6. **Utworzenie indeksów**
+6. **Create indexes**
 
    ```text
    indeksy.sql
    ```
 
-7. **Dodanie wyzwalaczy**
+7. **Add triggers**
 
    ```text
    trigger dml.sql
@@ -157,7 +154,7 @@ Po utworzeniu nowej bazy danych należy wykonać skrypty w następującej kolejn
    trigger instead.sql
    ```
 
-8. **Uruchomienie przykładowych zapytań**
+8. **Run the sample queries**
 
    ```text
    selecty.sql
@@ -165,5 +162,5 @@ Po utworzeniu nowej bazy danych należy wykonać skrypty w następującej kolejn
    funkcje rankingowe lag, lead.sql
    ```
 
-Po wykonaniu wszystkich skryptów baza danych będzie zawierała kompletną strukturę, przykładowe dane oraz wszystkie elementy projektu (procedury, funkcje, widoki, indeksy i wyzwalacze).
+After executing all scripts, the database will contain the complete schema, sample data, and all project components (stored procedures, functions, views, indexes, and triggers).
 
