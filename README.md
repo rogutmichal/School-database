@@ -108,19 +108,19 @@ After creating a new database, execute the scripts in the following order:
 
 1. **Create the database tables**
 
-   * Copy and execute the script from **TableCreating.sql**, which creates all tables, primary keys, and foreign keys.
+    Copy and execute the script from **TableCreating.sql**, which creates all tables, primary keys, and foreign keys.
 
 2. **Populate the database with sample data**
 
-   ```text
-  DataSupplementation..sql
-   ```
+    ```text
+    DataSupplementation.sql
+    ```
 
 3. **Add stored procedures**
 
-   ```text
-   Procedures.sql
-   ```
+    ```text
+    Procedures.sql
+    ```
 
 4. **Add functions**
 
