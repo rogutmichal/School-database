@@ -25,22 +25,19 @@ The project includes:
 | File | Description |
 |------|-------------|
 | `Szkoła.docx` | Project documentation and all assignment requirements |
-| `TworzenieTabel.docx` | Creating tables and keys |
-| `Uzupelnianie calej bazy.sql` | Populating the database with sample data |
-| `procedury.sql` | Stored procedures |
-| `scalar function.sql` | Scalar functions |
-| `inline valued functions.sql` | Inline table-valued functions |
-| `multi-statement valued function.sql` | Multi-statement table-valued functions |
-| `Widoki.sql` | View definitions |
-| `widok indeksowany.sql` | Indexed view |
-| `indeksy.sql` | Creating indexes |
-| `ranking.sql` | Queries using ranking functions |
-| `funkcje rankingowe lag, lead.sql` | Examples of LAG and LEAD functions |
-| `trigger dml.sql` | DML trigger |
-| `trigger ddl.sql` | DDL trigger |
-| `trigger instead.sql` | INSTEAD OF trigger |
-| `selecty.sql` | Sample SQL queries |
-| `szkola.dmd` | Database diagram |
+| `TablesCreating.docx` | Creating tables and keys |
+| `DataSupplementation.sql` | Populating the database with sample data |
+| `Procedures.sql` | Stored procedures |
+| `ScalarFunctions.sql` | Scalar functions |
+| `InlineValueFunctions.sql` | Inline table-valued functions |
+| `Multi-statementValuedFunction.sql` | Multi-statement table-valued functions |
+| `Views.sql` | View definitions |
+| `IndexView'.sql` | Indexed view |
+| `Index.sql` | Creating indexes |
+| `Ranking.sql` | Queries using ranking functions |
+| `Laq, Lead.sql` | Examples of LAG and LEAD functions |
+| `Triggers.sql` | Triggers |
+| `Select.sql` | Sample SQL queries |
 
 ## Database Model
 
@@ -111,55 +108,53 @@ After creating a new database, execute the scripts in the following order:
 
 1. **Create the database tables**
 
-   * Copy and execute the script from **TworzenieTabel.sql**, which creates all tables, primary keys, and foreign keys.
+   * Copy and execute the script from **TableCreating.sql**, which creates all tables, primary keys, and foreign keys.
 
 2. **Populate the database with sample data**
 
    ```text
-   Uzupelnianie calej bazy.sql
+  DataSupplementation..sql
    ```
 
 3. **Add stored procedures**
 
    ```text
-   procedury.sql
+   Procedures.sql
    ```
 
 4. **Add functions**
 
    ```text
-   scalar function.sql
-   inline valued functions.sql
-   multi-statement valued function.sql
+   ScalarFunction.sql
+   InlineValuedFunctions.sql
+   Multi-StatementValuedFunction.sql
    ```
 
 5. **Create views**
 
    ```text
-   Widoki.sql
-   widok indeksowany.sql
+   Views.sql
+   IndexedView.sql
    ```
 
 6. **Create indexes**
 
    ```text
-   indeksy.sql
+   Index.sql
    ```
 
 7. **Add triggers**
 
    ```text
-   trigger dml.sql
-   trigger ddl.sql
-   trigger instead.sql
+   Triggers.sql
    ```
 
 8. **Run the sample queries**
 
    ```text
-   selecty.sql
-   ranking.sql
-   funkcje rankingowe lag, lead.sql
+   Select.sql
+   Ranking.sql
+   Lag, Lead.sql
    ```
 
 After executing all scripts, the database will contain the complete schema, sample data, and all project components (stored procedures, functions, views, indexes, and triggers).
